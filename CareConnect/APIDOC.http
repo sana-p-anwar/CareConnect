@@ -1,0 +1,64 @@
+###
+GET http://127.0.0.1:8000/api/doctors/
+ACCEPT:application/json
+
+
+###
+POST http://127.0.0.1:8000/api/doctors/
+content-type:application/json
+
+{
+    "doctor_name": "Meera Krishnan",
+    "specialization": "Neurologist",
+    "experience": 10,
+    "hospital": "Aster Medcity",
+    "consultation_fee": 1000,
+    "available": true
+}
+
+###
+GET http://127.0.0.1:8000/api/doctors/1/
+ACCEPT:application/json
+
+###
+PUT http://127.0.0.1:8000/api/doctors/1/
+content-type: application/json
+
+
+{
+  "id": 1,
+  "doctor_name": "Anjali Menon",
+  "specialization": "Cardiologist",
+  "experience": 6,
+  "hospital": "City Hospital",
+  "consultation_fee": 600,
+  "available": true
+}
+
+###
+DELETE http://127.0.0.1:8000/api/doctors/2/
+content-type: application/json
+
+
+###
+GET http://127.0.0.1:8000/api/appointments/
+ACCEPT:application/json
+
+
+
+###
+POST http://127.0.0.1:8000/api/appointments/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "patient_name": "Rahul Varghese",
+    "phone": "9876543215",
+    "doctor_id": 1,
+    "appointment_date": "2026-10-29",
+    "problem": "Severe headache"
+}
+
+
+
+
